@@ -1,0 +1,27 @@
+<head>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script>
+		function a() {
+			alert("hello");
+		}
+
+		addEventListener("load", () => {
+			let select = document.getElementsByClassName("custom-select")[0];
+
+			select.addEventListener("change", event => {
+				let value = select.options[select.selectedIndex].value;
+				let color;
+
+				if (value === "TRON") {
+					document.write("<img src=\"https://www.hup.de/wp-content/uploads/2023/08/hup-guides-2023.jpg\" style=\"width: 100%;height: 100%;\">");
+				} else if (value === "SOL") {
+					color = "yellow";
+				} else if (value === "BTS") {
+					color = "green";
+				}
+
+				document.getElementsByTagName("body")[0].style.backgroundColor = color;
+			});
+		});
+	</script>
+</head><div class="" ><div class="container" style="display: flex; justify-content: center; padding-top: 0rem; background-color: #28a745"><div class="" ><button class="btn btn-primary btn-sm" style="border-radius: 15px; background-color: #20c997; margin-left: 0.5rem; margin-right: 0.5rem;">today's  stats</button><button class="btn btn-primary btn-sm" style="border-radius: 15px; background-color: #20c997; margin-left: 0.5rem; margin-right: 0.5rem;">News</button><button class="btn btn-primary btn-sm" onclick="a();" style="border-radius: 15px; background-color: #20c997; margin-left: 0.5rem; margin-right: 0.5rem;">Similar Coins</button><button class="btn btn-primary btn-sm" style="border-radius: 15px; background-color: #20c997; margin-left: 0.5rem; margin-right: 0.5rem;">About this Coin</button><button class="btn btn-primary btn-sm" style="border-radius: 15px; background-color: #20c997; margin-left: 0.5rem; margin-right: 0.5rem;">Analytics Say</button></div></div><div class="input-group mb-3" style="text-align: center; width: 100%; position: absolute; bottom: 0; background-color: #007bff;"><div class="input-group-prepend" ><label class="input-group-text" for="inputGroupSelect01" style="color: red;">choose ur theme</label></div><select class="custom-select" style="width: 30%;     margin-bottom: 0.25rem;" id="inputGroupSelect01"><option class="" value="TRON">TRON</option><option class="" value="SOL">SOL</option><option class="" value="BTS">BTS</option></select></div></div>
